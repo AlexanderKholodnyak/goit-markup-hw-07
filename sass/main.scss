@@ -1,5 +1,10 @@
 @import "./base/normalize";
 @import "./utils/variables";
+@import "./components/page-header";
+@import "./components/logo";
+@import "./components/hero";
+@import "./components/footer";
+
 html {
   box-sizing: border-box;
 }
@@ -8,25 +13,37 @@ html {
 *::after {
   box-sizing: border-box;
 }
-:root {
-  --primary-text-color: #757575;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --primary-white-color: #ffffff;
-  --logo-black-color: #000000;
-  --background-color: rgba(47, 48, 58, 0.8);
-  --background-color-project: rgba(33, 150, 243, 0.9);
-  --copiright--color: rgba(255, 255, 255, 0.4);
-  --link-contacts-color: rgba(255, 255, 255, 0.6);
-  --border-secondary-color: #afb1b8;
-  --background-grey-color: #f5f4fa;
-}
+// :root {
+//   --primary-text-color: #757575;
+//   --title-text-color: #212121;
+//   --accent-color: #2196f3;
+//   --primary-white-color: #ffffff;
+//   --logo-black-color: #000000;
+//   --background-color: rgba(47, 48, 58, 0.8);
+//   --background-color-project: rgba(33, 150, 243, 0.9);
+//   --copiright--color: rgba(255, 255, 255, 0.4);
+//   --link-contacts-color: rgba(255, 255, 255, 0.6);
+//   --border-secondary-color: #afb1b8;
+//   --background-grey-color: #f5f4fa;
+// }
+
+// $primaryTextColor: #757575;
+// $titleTextColor: #212121;
+// $accentColor: #2196f3;
+// $primaryWhiteColor: #ffffff;
+// $logoBlackColor: #000000;
+// $backgroundColor: rgba(47, 48, 58, 0.8);
+// $backgroundColorProject: rgba(33, 150, 243, 0.9);
+// $copirightColor: rgba(255, 255, 255, 0.4);
+// $linkContactsColor: rgba(255, 255, 255, 0.6);
+// $borderSecondaryColor: #afb1b8;
+// $backgroundGreyColor: #afb1b8;
 
 body {
   margin: 0;
 
-  background-color: var(--primary-white-color);
-  color: var(--primary-text-color);
+  background-color: $primaryWhiteColor;
+  color: $primaryTextColor;
 
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -59,7 +76,7 @@ a {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-text-color);
+  color: $titleTextColor;
 
   font-weight: 500;
   font-size: 14px;
@@ -78,8 +95,8 @@ a {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: var(--accent-color);
-  outline-color: var(--accent-color);
+  color: $accentColor;
+  outline-color: $accentColor;
 }
 
 .bottom-line {
@@ -97,10 +114,10 @@ a {
   height: 4px;
   border-radius: 2px;
 
-  background-color: var(--accent-color);
+  background-color: $accentColor;
 }
 .site-nav .link.current {
-  color: var(--accent-color);
+  color: $accentColor;
 }
 img {
   margin: 0;
@@ -126,7 +143,7 @@ img {
 }
 
 .logo {
-  color: var(--logo-black-color);
+  color: $logoBlackColor;
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -139,18 +156,17 @@ img {
 }
 
 .blue-logo {
-  color: var(--accent-color);
+  color: $accentColor;
 }
 .logo:focus,
 .logo:hover {
-  /* color: var(--accent-color); */
-  outline-color: var(--accent-color);
+  outline-color: $accentColor;
 }
 .title {
   margin-top: 0;
   margin-bottom: 0;
 
-  color: var(--title-text-color);
+  color: $titleTextColor;
 
   font-weight: 700;
   font-size: 14px;
@@ -196,7 +212,7 @@ img {
   margin-top: 0;
   margin-bottom: 40px;
 
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
 
   font-weight: 900;
   font-size: 44px;
@@ -215,8 +231,8 @@ img {
   min-width: 200px;
   height: 50px;
 
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
   border: none;
 
   font-weight: 700;
@@ -248,8 +264,8 @@ img {
   display: flex;
   align-items: center;
 
-  fill: var(--primary-text-color);
-  color: var(--primary-text-color);
+  fill: $primaryTextColor;
+  color: $primaryTextColor;
   margin-left: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -264,8 +280,8 @@ img {
 
 .auth-nav .link:focus,
 .auth-nav .link:hover {
-  color: var(--accent-color);
-  fill: var(--accent-color);
+  color: $accentColor;
+  fill: $accentColor;
   outline: none;
 }
 
@@ -288,7 +304,7 @@ img {
   margin-bottom: 30px;
 
   border-radius: 4px;
-  background-color: var(--background-grey-color);
+  background-color: $backgroundGreyColor;
 }
 .icon-features {
   width: 70px;
@@ -331,8 +347,8 @@ main section:nth-child(2) {
   padding-top: 25px;
   padding-bottom: 25px;
 
-  color: var(--primary-white-color);
-  background-color: var(--background-color);
+  color: $primaryWhiteColor;
+  background-color: $backgroundColor;
 
   font-weight: 700;
   font-size: 14px;
@@ -453,8 +469,8 @@ main section:nth-child(5) {
   justify-content: center;
 
   border: 1px solid;
-  border-color: var(--border-secondary-color);
-  fill: var(--border-secondary-color);
+  border-color: $borderSecondaryColor;
+  fill: $borderSecondaryColor;
   border-radius: 4px;
 
   width: 170px;
@@ -465,8 +481,8 @@ main section:nth-child(5) {
 }
 .client-list .item .item__link:focus,
 .client-list .item .item__link:hover {
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
+  fill: $accentColor;
+  border-color: $accentColor;
   outline: none;
 }
 .icon-logo-1 {
@@ -513,7 +529,7 @@ h3 {
 h3.down {
   margin-bottom: 10px;
 
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
 
   font-size: 22px;
   line-height: 1.18;
@@ -527,12 +543,12 @@ address p {
   margin-bottom: 10px;
 }
 address p:first-child {
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
 }
 address p:last-child {
   margin-bottom: 0px;
 
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
 }
 .basement section:nth-child(2) {
   margin-right: -50px;
@@ -560,7 +576,7 @@ address p:last-child {
 }
 .net-image-footer:focus,
 .net-image-footer:hover {
-  background-color: var(--accent-color);
+  background-color: $accentColor;
   outline: none;
 }
 .link-color a {
@@ -570,7 +586,7 @@ address p:last-child {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: var(--link-contacts-color);
+  color: $linkContactsColor;
 }
 /* .join {
   display: flex;
@@ -581,7 +597,7 @@ address p:last-child {
   margin-top: 0px;
   margin-right: 63px;
 
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
 
   font-weight: 700;
   font-size: 14px;
@@ -604,7 +620,7 @@ address p:last-child {
   line-height: 2;
   text-align: center;
 
-  color: var(--copiright--color);
+  color: $copirightColor;
 }
 footer > p {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -632,7 +648,7 @@ footer > p {
   height: 100%;
   top: 100%;
 
-  background-color: var(--background-color-project);
+  background-color: $backgroundColorProject;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -663,7 +679,7 @@ footer > p {
   line-height: 1.56;
 
   letter-spacing: 0.03em;
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
 }
 .project-item:focus,
 .project-item:hover {
@@ -683,7 +699,7 @@ footer > p {
   margin-bottom: 5px;
   margin-left: 24px;
 
-  color: var(--title-text-color);
+  color: $titleTextColor;
 
   font-weight: 700;
   font-size: 18px;
@@ -704,7 +720,7 @@ p.kind-work {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: $primaryTextColor;
 }
 
 /* Button */
@@ -716,15 +732,15 @@ p.kind-work {
   padding: 6px 22px;
   min-width: 73px;
 
-  color: var(--title-text-color);
-  background-color: var(--primary-white-color);
+  color: $titleTextColor;
+  background-color: $primaryWhiteColor;
 
   cursor: pointer;
 }
 
 .button.primary {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
   border: none;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -737,8 +753,8 @@ p.kind-work {
 }
 
 .button.secondary {
-  color: var(--title-text-color);
-  background-color: var(--background-grey-color);
+  color: $titleTextColor;
+  background-color: $backgroundGreyColor;
   border: none;
 
   font-family: Roboto;
@@ -757,7 +773,7 @@ p.kind-work {
   width: 200px;
   height: 50px;
 
-  color: var(--primary-white-color);
+  color: $primaryWhiteColor;
   border: none;
 
   font-family: Roboto;
@@ -943,19 +959,19 @@ main.main-portfolio {
   /* background-color: tomato; */
 }
 .form-icon {
-  fill: var(--title-text-color);
+  fill: $titleTextColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field:focus-within > .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
   transform: translate(-27px, -40px);
-  color: var(--accent-color);
+  color: $accentColor;
   font-size: 12px;
   line-height: 1.17;
 }
 .form-input:focus ~ .form-icon,
 .form-input:not(:placeholder-shown) ~ .form-icon {
-  fill: var(--accent-color);
+  fill: $accentColor;
 }
 
 .form-input:not(:placeholder-shown),
@@ -963,7 +979,7 @@ main.main-portfolio {
 .textarea:not(:placeholder-shown),
 .textarea:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: $accentColor;
 }
 .textarea {
   position: relative;
@@ -986,7 +1002,7 @@ main.main-portfolio {
 .textarea:focus-within + .form-label,
 .textarea:not(:placeholder-shown) + .form-label {
   transform: translateY(-30px);
-  color: var(--accent-color);
+  color: $accentColor;
 }
 
 .button-close {
@@ -1024,7 +1040,7 @@ main.main-portfolio {
 }
 .contract-text {
   text-decoration: underline;
-  color: var(--accent-color);
+  color: $accentColor;
 }
 .checkbox {
   /* -webkit-appearance: none;
@@ -1051,8 +1067,8 @@ main.main-portfolio {
   margin-right: 8px;
 }
 .checkbox:checked + .checkbox-label {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
+  border-color: $accentColor;
+  background-color: $accentColor;
   background-image: url("../images/form-icon-check.svg");
   background-size: contain;
   background-origin: border-box;
