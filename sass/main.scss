@@ -433,7 +433,7 @@ main section:nth-child(4) {
   width: 44px;
   height: 44px;
   background-color: transparent;
-  fill: #afb1b8;
+  fill: $backgroundGreyColor;
 
   border-radius: 50%;
 
@@ -447,7 +447,7 @@ main section:nth-child(4) {
 .social-nets .net-image:focus,
 .social-nets .net-image:hover {
   background-color: #2196f3;
-  fill: #fff;
+  fill: $primaryWhiteColor;
   outline: none;
 }
 main section:nth-child(5) {
@@ -568,7 +568,7 @@ address p:last-child {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
-  fill: #ffffff;
+  fill: $primaryWhiteColor;
 
   border-radius: 50%;
 
@@ -890,7 +890,7 @@ main.main-portfolio {
   height: 581px;
   padding: 40px;
 
-  background-color: #fff;
+  background-color: $primaryWhiteColor;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -941,7 +941,7 @@ main.main-portfolio {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: $titleTextColor;
 }
 
 .form-field .form-icon {
@@ -1061,7 +1061,7 @@ main.main-portfolio {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border: 2px solid #212121;
+  border: 2px solid $titleTextColor;
   border-radius: 2px;
 
   margin-right: 8px;
