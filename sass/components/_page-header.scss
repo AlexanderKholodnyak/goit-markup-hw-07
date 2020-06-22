@@ -1,0 +1,145 @@
+.list.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $titleTextColor;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.list.auth-nav a.link {
+  vertical-align: text-top;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: $accentColor;
+  outline-color: $accentColor;
+}
+
+.bottom-line {
+  position: relative;
+}
+
+.site-nav .link.current::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: $accentColor;
+}
+.site-nav .link.current {
+  color: $accentColor;
+}
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.logo {
+  color: $logoBlackColor;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.logo-nav > .logo {
+  margin-right: 86px;
+}
+
+.blue-logo {
+  color: $accentColor;
+}
+.logo:focus,
+.logo:hover {
+  outline-color: $accentColor;
+}
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $titleTextColor;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.list p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* auth-nav */
+
+.auth-nav .item {
+  display: block;
+  margin-right: 30px;
+}
+.auth-nav .item:last-child {
+  margin-right: 0;
+}
+
+.auth-nav {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.auth-nav .link {
+  display: flex;
+  align-items: center;
+
+  fill: $primaryTextColor;
+  color: $primaryTextColor;
+  margin-left: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.auth-nav .link:focus,
+.auth-nav .link:hover {
+  color: $accentColor;
+  fill: $accentColor;
+  outline: none;
+}
+
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+}
+.icon-smartphone {
+  width: 10px;
+  height: 15px;
+}
