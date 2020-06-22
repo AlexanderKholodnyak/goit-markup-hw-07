@@ -1,0 +1,30 @@
+.logo {
+  color: $logoBlackColor;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  &:focus,
+  &:hover {
+    outline-color: $accentColor;
+  }
+}
+.logo-nav > .logo {
+  margin-right: 86px;
+}
+.blue-logo {
+  color: $accentColor;
+}
+/* Main nav */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+}

@@ -278,18 +278,17 @@ summary {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.site-nav .link:hover, .site-nav .link:focus {
+  color: #2196f3;
+  outline-color: #2196f3;
+}
+
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
 
 .list.auth-nav a.link {
   vertical-align: text-top;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: #2196f3;
-  outline-color: #2196f3;
 }
 
 .bottom-line {
@@ -313,28 +312,6 @@ summary {
 
 .header {
   border-bottom: 1px solid #ececec;
-}
-
-.logo {
-  color: #000000;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-}
-
-.logo-nav > .logo {
-  margin-right: 86px;
-}
-
-.blue-logo {
-  color: #2196f3;
-}
-
-.logo:focus,
-.logo:hover {
-  outline-color: #2196f3;
 }
 
 .title {
@@ -392,15 +369,14 @@ summary {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon {
-  margin-right: 10px;
-}
-
-.auth-nav .link:focus,
-.auth-nav .link:hover {
+.auth-nav .link:hover, .auth-nav .link:focus {
   color: #2196f3;
   fill: #2196f3;
   outline: none;
+}
+
+.icon {
+  margin-right: 10px;
 }
 
 .icon-envelope {
@@ -411,6 +387,27 @@ summary {
 .icon-smartphone {
   width: 10px;
   height: 15px;
+}
+
+.logo {
+  color: #000000;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo:focus, .logo:hover {
+  outline-color: #2196f3;
+}
+
+.logo-nav > .logo {
+  margin-right: 86px;
+}
+
+.blue-logo {
+  color: #2196f3;
 }
 
 /* Main nav */
@@ -674,8 +671,7 @@ main section:nth-child(4) {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-list .item .item__link:focus,
-.client-list .item .item__link:hover {
+.client-list .item .item__link:hover, .client-list .item .item__link:focus {
   fill: #2196f3;
   border-color: #2196f3;
   outline: none;
@@ -717,6 +713,17 @@ main section:nth-child(4) {
   overflow: hidden;
 }
 
+.project-item:focus, .project-item:hover {
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.project-item:hover .project__background,
+.project-item:focus .project__background {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 .project__image {
   position: relative;
   overflow: hidden;
@@ -732,16 +739,6 @@ main section:nth-child(4) {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-item:hover .project__background {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-.project-item:focus .project__background {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 .description-project {
@@ -766,12 +763,6 @@ main section:nth-child(4) {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
-}
-
-.project-item:focus,
-.project-item:hover {
-  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .project-text {
@@ -919,8 +910,7 @@ address p:last-child {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.net-image-footer:focus,
-.net-image-footer:hover {
+.net-image-footer:focus, .net-image-footer:hover {
   background-color: #2196f3;
   outline: none;
 }
@@ -1341,16 +1331,15 @@ footer > p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-socialnet {
-  width: 20px;
-  height: 20px;
-}
-
-.social-nets .net-image:focus,
-.social-nets .net-image:hover {
+.social-nets .net-image:focus, .social-nets .net-image:hover {
   background-color: #2196f3;
   fill: #ffffff;
   outline: none;
+}
+
+.icon-socialnet {
+  width: 20px;
+  height: 20px;
 }
 
 html {
